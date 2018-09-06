@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      Data Types, User Input, Conditional Logic - Uncommented
+    </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      var userName = prompt("What's your name?");//ask user question with input
+      var confirmCats = confirm("Do you like cats?");//ask a boolean 
+
+      var petName = "Meeses";//make a string variable
+      var petType = "Tuxedo Cat";//make a string variable
+      var petAge = 5;//make a number varaible
+      var petIsCat = true;//,make a boolean variable 
+
+      if (confirmCats) {
+        alert(petName + " " + petType + " " + petAge);//in the conditional if boolean is true ask the user for input and concatnate with string variable
+      }
+      else {
+        alert("You don't get my cat's information");//print out message if boolean is flase
+      }
+
+      if (petIsCat) {
+        alert("My pet is a cat");//if boolean is true alert
+      }
+      else {
+        alert("My pet is not a cat");//if boolean is false then output 
+      }
+
+      if (petAge !== 7) {
+        alert("My pet is not 7 years old");// if  boolean is true then output
+      }
+
+      if (petAge === 5) {
+        alert("My pet is 5 years old");//if boolean is true then output 
+      }
+      else if (petAge < 5) {
+        alert("My pet is less than 5 years old");//if boolean is false 
+      }
+      else {
+        alert("My pet is older than 5 years old");//if boolean is false 
+      }
+
+      // document.write() overwrites the entire page. We don't normally use this, but we will today for simplicity
+      document.write("Welcome to our page " + userName);//rewrite the html doc 
+
+      var catAge = prompt("How old is your cat?");// ask for age  variable
+
+      // Won't work as expected
+      alert(catAge + 2);//display variable plus 2 
+
+      // Works as expected`
+      alert(parseInt(catAge) + 2);//display above variable 
+
+    </script>
+  </body>
+</html>

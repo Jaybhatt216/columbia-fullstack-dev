@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+      // Array of farm.
+      var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+///write a loop that will loop through and print each element and then if name
+//start with C or O it will alert
+
+//double array  
+      for (var i = 0; i <  myFarm.length; i++) {
+       console.log("there is " +  myFarm[i] + " at the farm");
+        if (myFarm[i][0] === 'c' || myFarm[i][0] === 'o'){
+          alert("there is a c or o");
+
+        }
+    
+
+      }
+      //another way
+      var currentAnimal= myFarm[i];
+      if (currentAnimal[0] == "c" || currentAnimal[0] == "o") {
+        alert("start c or O");
+      }
+      
+    </script>
+    
+  </body>
+</html>
+
+
+
+  
