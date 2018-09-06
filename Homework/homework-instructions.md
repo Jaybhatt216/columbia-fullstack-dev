@@ -1,89 +1,130 @@
-# Responsiveness Assignment
+# JavaScript Assignment
 
 ### Overview
 
-In this assignment, you'll create two different portfolios. The first will be building
-your portfolio layout using the Bootstrap CSS Framework. The second will be enhancing
-the portfolio you made last week with a mobile-responsive layout.
-
-### Before You Begin
-
-* You've learned a ton of material: HTML, CSS, GitHub, GitHub Pages, and Bootstrap. If you feel like you're falling behind, there's no need to panic. You'll have weeks to digest and master this material.
-
-* We're diving into JavaScript next week, and HTML/CSS will start receiving less focus. Still, you'll find that a basic knowledge of HTML/CSS will help you understand JavaScript, especially when we use it to manipulate web pages.
+In this assignment, you'll create one of two possible computer games: Word Guess or Psychic. These apps will run in the browser, and feature dynamically updated HTML and CSS powered by your JavaScript code.
 
 ### Submission on BCS
 
 * Please submit both the deployed Github.io link to your homework AND the link to the Github Repository!
 
-### Instructions
+### Before You Begin
 
-1. Create two new GitHub repositories and name them `Bootstrap-Portfolio` and `Responsive-Portfolio`.
+1. Create a new GitHub repo called `Word Guess Game` or `Psychic-Game`, in accordance with the assignment you choose to complete. Then, clone it to your computer.
 
-2. Clone these repositories to your computer.
+2. Inside your local git repository, create an `index.html`.
 
-### Assignment One Instructions (Bootstrap)
+3. While still in your local git repo, create a directory called `assets`.
+4. `cd` your way into the `assets` folder, then make three additional folders: `javascript`, `css` and `images`.
 
-1. Inside your `Bootstrap-Portfolio` repo, create `index.html`, `portfolio.html` and `contact.html`.
+   * In the `javascript` folder, make a file called `game.js`. Use the `src` attribute of the `script` tag to link to this file, rather than embedding the code directly in your HTML document.
+   * In the `css` folder, make a file called `style.css`.
+   * Also in the `css` folder, make a file called `reset.css`. Paste into it the code from the Meyerweb reset stylesheet. If you opt to use Bootstrap instead of writing your own CSS, skip this step, and simply include a link to Bootstrap via CDN.
+   * In the `images` folder, save whatever images you plan on using.
 
-2. Using Bootstrap, recreate your portfolio site with the following items:
+```
+├── assets
+|  ├── css
+|  |  └── style.css
+|  ├── images
+|  └── javascript
+|     └── game.js
+└── index.html
+```
 
-   * A navbar
+5. Push the above changes to GitHub.
 
-   * A responsive layout (remember the grid, rows and columns are your friends)
+6. Choose whichever game you'd like to build. Making the Psychic game will prove less challenging than coding Word Guess. However, as the challenge of the Word Guess exercise provides a more comprehensive review of this week's material, we suggest attempting that assignment first.
 
-     * eg. On `xs` and `sm` screens, each section should take up the entire grid. On `md` and larger screens, each section should take up 2/3 of the grid and the sidebar should take up 1/3 of the grid
+7. Note: There's no shame if you'd prefer submitting Psychic—it's still a proper challenge.
 
-   * Responsive images
+8. Push your selected game to Github Pages.
 
-   **BONUS**
-   Using Bootstrap, make a sticky footer and use sub-rows and sub-columns on your portfolio site _(Hint: Check out the Bootstrap documentation)_
 
-3. Your Bootstrap solution should minimize use of media queries.
+## Option One: Psychic Game (Basic)
 
-4. Deploy your new Bootstrap-powered portfolio to GitHub Pages.
+![Psychic](Images/1-Psychic.jpg)
 
-### Assignment Two Instructions - (No Bootstrap)
+1. [Watch the demo](psychic-game-demo.mov).
 
-1. Copy the contents of `Basic-Portfolio` (your first homework solution) and paste the mentioned files into `Responsive-Portfolio`.
+2. You're going to make a game just like the one in the video. Essentially, the app randomly picks a letter, and the user has to guess which letter the app chose. Put the following text on your page:
 
-2. Note: Be sure not to include any dot files (e.g. .git, .gitignore) from the `Basic-Portfolio` repo.
+3. Guess what letter I'm thinking of
 
-3. If you chose the `Wireframe` exercise for your first homework assignment, talk to a TA, who will provide you with a template for your portfolio.
+4. Wins: (# of times the user has guessed the letter correctly)
 
-4. Inside your `Responsive-Portfolio` folder, find your `styles.css` file. You will write your media queries at the bottom of `styles.css`.
+5. Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
 
-5. Use three `@media screen` tags, each with one of these `max-width`s: `980px`, `768px` and `640px`.
+6. Guesses Left: (# of guesses left. This will update)
 
-   * You use `980px` because you never want any of the content to be cut off. Since the desktop layout is about 960px wide, you want the media queries to kick in before your content gets cut off.
+7. Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
 
-   * `768px` is about the width of a tablet and `640px` is about the width of a phone in landscape.
+8. When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
 
-6. Make the layout match the following screenshots:
+9. When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).
 
-   * `index.html`: [980px](Images/980-index.jpg), [768px](Images/768-index.jpg), [640px](Images/640-index.jpg)
+## Option Two: Word Guess Game (Challenge - Recommended)
 
-   * `portfolio.html`: [980px](Images/980-portfolio.jpg), [768px](Images/768-portfolio.jpg), [640px](Images/640-portfolio.jpg)
+1. [Watch the demo](hangman-game-demo.mov).
 
-   * `contact.html`: [980px](Images/980-contact.jpg), [768px](Images/768-contact.jpg), [640px](Images/640-contact.jpg)
+2. Choose a theme for your game! In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. You can choose any subject for your theme, though, so be creative!
 
-7. Make the position of the header `static` (the default positioning) when the screen is `640px` wide. The header design takes up a lot of room; you don't want it to stick to the top of a small screen and leave no room for the rest of your site.
+3. Use key events to listen for the letters that your players will type.
 
-8. Be sure to include the `viewport` tag in all your HTML files, otherwise your media-queries won't function as expected on mobile devices. _(Hint: You won't need to use exact pixels for anything other than the container)_
+4. Display the following on the page:
 
-9. **Protip**: Use the Chrome extensions [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh) and [Browser Width](https://chrome.google.com/webstore/detail/browser-width/mlnegepkjlccabakompdmbcmdieaideh) to see the browser dimensions in Chrome.
+5. Press any key to get started!
 
-10. Deploy your new portfolio (now with media queries!) to GitHub Pages.
+6. Wins: (# of times user guessed the word correctly).
 
-### Submitting Your Work on [BootCampSpot](https://www.bootcampspot-v2.com/)
+   * If the word is `madonna`, display it like this when the game starts: `_ _ _ _ _ _ _`.
 
-1. Submit the GitHub links to your portfolio repositories on GitHub.
+   * As the user guesses the correct letters, reveal them: `m a d o _  _ a`.
 
-2. Submit the link to your (GitHub Pages) deployed site in the same input field.
+7. Number of Guesses Remaining: (# of guesses remaining for the user).
 
-### BONUS
+8. Letters Already Guessed: (Letters the user has guessed, displayed like `L Z Y H`).
 
-* Incorporate CSS animations in your portfolio. [More info here](http://www.w3schools.com/css/css3_animations.asp).
+9. After the user wins/loses the game should automatically choose another word and make the user play it.
+
+##### Word Guess Game Bonuses
+
+1. Play a sound or song when the user guesses their word correctly, like in our demo.
+2. Write some stylish CSS rules to make a design that fits your game's theme.
+3. **HARD MODE:** Organize your game code as an object, except for the key events to get the letter guessed. This will be a challenge if you haven't coded with JavaScript before, but we encourage anyone already familiar with the language to try this out.
+4. Save your whole game and its properties in an object.
+5. Save any of your game's functions as methods, and call them underneath your object declaration using event listeners.
+6. Don't forget to place your global variables and functions above your object.
+   * Remember: global variables, then objects, then calls.
+7. Definitely talk with a TA or your instructor if you get tripped up during this challenge.
+
+- - -
+
+#### A Few Tips
+
+1. **IMPORTANT:** Whichever assignment you choose, code your game one piece at a time! Code all of your apps one piece at a time. _Always code one piece at a time!_
+2. Pseudocode your program and break the app down into tiny, manageable fragments. This will make the coding process much less frustrating and a veritable Mach number faster. Otherwise, you'll be chipping away at a giant chunk of abstraction for way too many hours.
+
+   * The ability to solve a large problem by treating it as a set of smaller ones is the hallmark of a strong programmer. Best start adapting this into your development routine now, to better prepare for your more complex future projects.
+   * Remember:
+     1. Split the whole program into many distinct, pseudocoded problems.
+     2. Focus on one of the smaller problems and solve it.
+     3. Only when you solve one problem should you then move onto your next problem.
+
+3. When you encounter bugs (and we all do), `console.log` will become your best friend. Regularly check your console to make sure your app is spitting out the right values.
+
+   * As a more advanced—but more powerful—alternative, feel free to experiment with the [Chrome DevTools Debugger](https://developers.google.com/web/tools/chrome-devtools/).
+
+4. Try your best to deliver a 'working/playable game' by the end of the deadline. If you're not making progress with Word Guess, switch gears to the Psychic game. Contact your TA/Instructor if you're not making progress after 2 hours. We're here to help!
+
+5. Substance over style! Submitting a working game matters more that making a broken app that at least looks pretty. We're focusing on game mechanics, not just on the look and feel of your app.
+6. That said, coding a functional app that also looks pretty would be impressive.
+
+7. Always commit your work and back it up with GitHub pushes. You don't want to lose hours of your work because you didn't push it to GitHub every half hour or so.
+
+   * **Commit often**.
+
+8. Turn in anything you have! Even if you don't finish, we still want to see what you were able to accomplish in the time we gave you. This will help us know what concepts we could help you with, as well as what topics we should focus on in the coming lectures.
 
 ### Reminder: Submission on BCS
 
@@ -93,7 +134,23 @@ the portfolio you made last week with a mobile-responsive layout.
 
 ### Minimum Requirements
 
-Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
+Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Adding a README.md as well as adding this homework to your portfolio are required as well and more information can be found below.
+
+- - -
+
+### Create a README.md
+
+Add a `README.md` to your repository describing the project. Here are some resources for creating your `README.md`. Here are some resources to help you along the way:
+
+* [About READMEs](https://help.github.com/articles/about-readmes/)
+
+* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+
+- - -
+
+### Add To Your Portfolio
+
+After completing the homework please add the piece to your portfolio. Make sure to add a link to your updated portfolio in the comments section of your homework so the TAs can easily ensure you completed this step when they are grading the assignment. To receive an 'A' on any assignment, you must link to it from your portfolio.
 
 - - -
 
