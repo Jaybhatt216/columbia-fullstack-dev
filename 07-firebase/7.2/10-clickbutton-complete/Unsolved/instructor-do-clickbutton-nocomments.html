@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Click Button with Firebase!</title>
+
+  <!-- -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+  <!-- -->
+  <h1>Ouch! You've clicked me
+    <span id="click-value"></span> times!</h1>
+
+  <!-- makes a button -->
+  <button id="click-button">Click Me!!!!</button>
+  
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>  <!--initalizing  firebase-->
+  <!--load jquery and ajax  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- ================================================================================== -->
+  <script>
+
+    
+
+
+  // Initialize Firebase provided by firebase config to connect to firebase includes api key and domains
+  var config = {
+    apiKey: "AIzaSyDfaTnzOF8xBIOldXSMwIm6-qRIxy8HPaY",
+    authDomain: "test1-24c63.firebaseapp.com",
+    databaseURL: "https://test1-24c63.firebaseio.com",
+    projectId: "test1-24c63",
+    storageBucket: "test1-24c63.appspot.com",
+    messagingSenderId: "854765403546"
+  };//intial firebase with the account info provided above
+  firebase.initializeApp(config);
+
+    // VARIABLES
+    // --------------------------------------------------------------------------------
+
+    var database = firebase.database();
+    var clickCounter = 0;
+
+    // FUNCTIONS + EVENTS
+    // --------------------------------------------------------------------------------
+
+    $("#click-button").on("click", function() {
+      clickCounter++;
+      //overwrite all the data in the data base to click counter
+      database.ref().set({
+        clickCount: clickCounter
+      });
+    });
+
+    // MAIN PROCESS + INITIAL CODE
+    // ----------------------------//snapshot saves the info each time it gets upated ----------------------------------------------------
+    // upadting the dom with the value of the database, using the .on('value') listen for changes in the database and log out the most recent values
+    database.ref().on("value", function(snapshot) {
+      console.log(snapshot.val());
+      //update the value of the span with the current click count from the database
+      $("#click-value").text(snapshot.val().clickCount);
+      //setting the click counter to the value of the database
+      clickCounter = snapshot.val().clickCount;
+      //if there is some error is occured during the obtaining of the firebase data base 
+    }, function(errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+    
+
+  </script>
+
+</body>
+
+</html>
