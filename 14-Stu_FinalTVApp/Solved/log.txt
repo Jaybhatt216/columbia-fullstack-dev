@@ -1,0 +1,56 @@
+Name: Jennifer Lopez
+
+Birthday: 1969-07-24
+
+Gender: Female
+
+Country: United States
+
+URL: http://www.tvmaze.com/people/31913/jennifer-lopez
+------------------------------------------------------------
+
+Show: Naked and Afraid
+
+Genre(s): Drama, Adventure, Nature
+
+Rating: 7.4
+
+Network: Discovery Channel
+
+Summary: <p>Each week on <b>Naked and Afraid</b>, a new pair of complete and total strangers - one man and one woman - will find themselves stranded in and, quite literally, exposed to one of the world's most extreme weather environments. This duo will be left high and dry with no food, no water... and no clothes. They must survive on their own for a full 21 days, with nothing but one personal item each and the knowledge that the only prize is their pride and sense of accomplishment.</p>
+------------------------------------------------------------
+
+Name: Jennifer Lawrence
+
+Birthday: 1990-08-15
+
+Gender: Female
+
+Country: United States
+
+URL: http://www.tvmaze.com/people/58451/jennifer-lawrence
+------------------------------------------------------------
+
+Name: Jennifer Beals
+
+Birthday: 1963-12-19
+
+Gender: Female
+
+Country: United States
+
+URL: http://www.tvmaze.com/people/38689/jennifer-beals
+------------------------------------------------------------
+
+
+Name: Jennifer Garner
+
+Birthday: 1972-04-17
+
+Gender: Female
+
+Country: United States
+
+URL: http://www.tvmaze.com/people/49202/jennifer-garner
+------------------------------------------------------------
+

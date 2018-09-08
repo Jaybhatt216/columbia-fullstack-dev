@@ -1,0 +1,14 @@
+Pesduo code the app using bullets points
+
+your code needs to be able to take input from command 
+your code must read the input 
+After reading your input the code must search
+your code should be able to search through a database 
+your code should be able to pull information from database
+your code should display the information on cli
+
+first thing should most likely be done is use process.argv to take input
+next there must be some sort of database to pull data from like ajax and omdb
+and finally I think a console.log should be able to print the information 
+
+
