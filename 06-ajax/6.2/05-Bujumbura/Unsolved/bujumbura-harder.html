@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bujumbura Data</title>
+</head>
+
+<body>
+  <!-- Retrieved data will be dumped here -->
+  <div class="city"></div>
+  <div class="country"></div>
+  <div class="wind"></div>
+  <div class="wind_degree"></div>
+  <div class="humidity"></div>
+  <div class="temp"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Things to accomplish:
+    // Get an API Key from OpenWeatherMap API
+    // Create an AJAX call to retrieve data Log the data in console
+    // Log the data in HTML
+    // Scream Ushindi (victory in Swahili)! at the top of your lungs
+    let pick_a_city=prompt("pick a city");
+    let pick_a_country=prompt("enter country code");
+    var apikey= "49a4f9fb981468e45c78f9cb385d8722";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+pick_a_city+ ',' + pick_a_country+"&appid=" + apikey;
+       $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      $(".city").text("city" + response.name)
+      $(".country").text("country" + response.sys.country)
+      $(".temp").text("temp" + ((response.main.temp -273.15)*1.80+32)+"F");
+      $(".wind").text("wind" + response.wind.speed)
+      $(".wind_degree").text("wind_degree"+ response.wind.deg)
+      $(".humidity").text("humidity" + response.main.humidity)
+
+  });
+  </script>
+
+</body>
+
+</html>
